@@ -1,0 +1,47 @@
+WARNING: DO NOT MOVE ANY OF THE FILES OUT OF THE F_AI MAIN DIRECTORY. YOU CAN CREATE A SHORTCUT TO F_AI ON YOUR DESKTOP, BUT DO NOT MOVE THE ACTUAL FILE THERE. IF YOU DO, IT WILL NOT RUN.
+
+
+
+
+F_AI is a bot who talks to Copilot so that you don't have to.
+
+Unfortunately, Copilot is a terrible, horrible, no good, very bad AI, and does not have an API, which means that the F_AI setup is reliant upon the user.
+
+F_AI starts by having ChatGPT generate a prompt based on a topic which is randomly selected from a list of topics created by the user, (more on that later).
+In order to have ChatGPT generate the prompt, F_AI contacts it via API (yes, GPT is a real AI, not a complete piece of crap like Copilot, and so it actually has an API!).
+
+The bad news? GPT's API costs tokens to use, and tokens are not free. The good news? Tokens are cheaper than dirt, and you will be walked through buying them here. 
+And that leads us to step 1:
+
+Step 1 - Set up your API key. (This is needed to use the API, and is also the first step in acquiring the API tokens):
+	A) To set up your API key, you will need to go to https://platform.openai.com/account/api-keys
+	B) Once you have gone to https://platform.openai.com/account/api-keys, you will be prompted to do one of two things; set up a new account, or log in.
+		If you already have an existing account with OpenAI (the creators of ChatGPT), you can just log into that. If not, you will need to set one up. Don't worry, a free account 		is all you need.
+	C) After you have an account set up, and are logged in, you will be prompted to set up your "organization." You can skip as many steps here as possible, but it will offer to sell 		you tokens here as well. You do not have to buy them here, but, if you do, you do not need any more than the minimum that it allows you to purchase, which is $5 worth. 		F_AI is extremely cheap to run, and $5 of tokens will last you a VERY long time.
+	D) Great, so you are fully logged in. Now lets set up your API key. On the left side of your screen, you should see a quick access bar. On this quick access bar, there should be a 		lock icon. Click on the lock icon, and then click where it says "Create new secret key." You will be met with a screen asking you to name your key. Pick any name you want, 		and then click "create new security key." You will then be met with a window containing your API key. There is a file in the F_AI directory called api_key. Copy your API 		key, paste it into this file, and then save the file. Do not share this API key with anyone, or else they will have access to your tokens.
+
+Step 2 - Buying tokens:
+	A) Over on the same quick access bar from earlier, their will be a bar chart icon called "usage." Click this icon and you will be brought to a new screen. The purpose of this 			screen is to show you, in a dollar amount, how many tokens that you have spent. Obviously, this can be useful, but, for now, we can disregard most of this screen and simply 		click on the "Edit budget" button on the righthand side of the screen. This will take you to a new screen full of all sorts of new things to disregard.
+	B) On the left side of your screen, you should now see a whole new quick access bar. Click on the "Billing" tab.
+	C) You will be redirected to a new screen again. On this screen, there should be an option to add billing details. Go ahead and add a card, and then deposit $5, (this, of course, 		is assuming that you did not buy tokens when they were previously offered). 
+	D) After you set up a payment method, you should have the option to turn off automatic payments. Turning this off is recommended, but not required.
+	E) That is all that is required on the API side, and now we can get the app set up.
+
+Step 3 - Calibrate F_AI:
+	A) Due to the fact that Copilot was designed with utmost inconvenience in mind, and does not have an API, we have to take a somewhat unprofessional approach to automating the 			prompt that we send. First, you will need to make sure that the keyboard shortcut to Copilot is turned on in the Copilot settings. To do this, open Copilot. In the bottom		left corner of your screen, you should see a profile icon. Click on the profile icon and you will be met with a popup menu. On the popup menu, click "Settings." You will 		now be sent to the settings menu. Scroll to the bottom of the menu and make sure that the shortcut is on. Your shortcut should either be alt + space, or windows + c. Take		note of this for later.
+	B) In the F_AI file directory, there will be an .exe called MouseLocate. Run MouseLocate, and then open Copilot with your keyboard shortcut, and hover over the Copilot message bar. 		After a few seconds, a message will show up in the command prompt that opens when you run MouseLocate. This Message will contain the X and Y coordinates that your mouse was 		sitting at.
+	C) In the F_AI directory, there will be an Excel file called "XY_coordinates." Open this file.
+	D) In this file you will see example coordinates already in place. Replace these coordinates with the ones from MouseLocate. DO NOT change anything else in the Excel file.
+	E) F_AI now knows where the message bar is on Copilot, and we are almost done.
+
+Step 4 - Topic list:
+	A) In the F_AI file directory, there will be a text file called PromptTopics. Open this file.
+	B) In the PromptTopics file, there will be a few topic examples. You can delete these and replace them with as many of your own topics as you want. Just make sure that you keep the 		same format that the example topics were in, (Topic 1 - new line - topic 2 - new line...)
+
+Step 5 - Run F_AI:
+	A) You have now completed the setup of F_AI. All that is left to do is run the program.
+
+Once you run it, F_AI will run in the background until you terminate it.
+It is important to note that F_AI will send prompts to Copilot in randomly generated intervals. When a prompt is about to be sent, Copilot will be opened, and the Copilot window will pop up on your screen. The prompt will then be sent, and, after waiting for a reply from Copilot, Copilot will be closed.
+In the command prompt window that opens with F_AI, a message will print telling you when the next scheduled prompt will be. 
+  
